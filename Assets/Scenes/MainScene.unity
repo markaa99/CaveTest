@@ -2754,7 +2754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5014c4af1a2436429509bd51dcb4177, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.988
+      value: 0.184
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a5014c4af1a2436429509bd51dcb4177, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4001,7 +4001,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 1
     radius:
-      value: 5
+      value: 4
       mode: 0
       spread: 0
       speed:
@@ -4120,7 +4120,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 300
       minScalar: 10
       maxCurve:
         serializedVersion: 2
