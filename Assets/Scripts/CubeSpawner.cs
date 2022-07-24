@@ -9,8 +9,22 @@ public class CubeSpawner : MonoBehaviour
 
     private int delay = 0;
 
+    private bool _discovered = false;
+
+    private void Start()
+    {
+        _discovered = false;
+    }
+
+    private void OnEnable()
+    {
+        _discovered = true;
+    }
+
     void FixedUpdate()
     {
+        if (!_discovered) return;
+
         if (delay-- == 0)
         {
             SpawnCube();

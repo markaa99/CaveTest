@@ -1010,6 +1010,7 @@ MonoBehaviour:
   toggleObject: {fileID: 1318461224}
   onMaterial: {fileID: 2100000, guid: a005e718b9f7fdb478b8efc133d34064, type: 2}
   offMaterial: {fileID: 2100000, guid: 4a2abd4f67aefc24b9c6cca2d197adc7, type: 2}
+  toggleCooldown: 1
 --- !u!1 &574095588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,7 +2246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1202135182
 Transform:
   m_ObjectHideFlags: 0
@@ -2375,6 +2376,7 @@ MonoBehaviour:
   toggleObject: {fileID: 1581686373}
   onMaterial: {fileID: 2100000, guid: a005e718b9f7fdb478b8efc133d34064, type: 2}
   offMaterial: {fileID: 2100000, guid: 4a2abd4f67aefc24b9c6cca2d197adc7, type: 2}
+  toggleCooldown: 1
 --- !u!1 &1210338022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,7 +2435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1318461225
 Transform:
   m_ObjectHideFlags: 0
@@ -2824,7 +2826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1581686374
 Transform:
   m_ObjectHideFlags: 0
@@ -2964,6 +2966,7 @@ MonoBehaviour:
   toggleObject: {fileID: 1202135181}
   onMaterial: {fileID: 2100000, guid: a005e718b9f7fdb478b8efc133d34064, type: 2}
   offMaterial: {fileID: 2100000, guid: 4a2abd4f67aefc24b9c6cca2d197adc7, type: 2}
+  toggleCooldown: 1
 --- !u!1 &1664324684
 GameObject:
   m_ObjectHideFlags: 0
