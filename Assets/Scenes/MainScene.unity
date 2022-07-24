@@ -1356,7 +1356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724453643}
   m_LocalRotation: {x: 0.7071068, y: 0.000000014901161, z: -0.000000059604645, w: 0.7071068}
-  m_LocalPosition: {x: -0.308, y: -0.2, z: -0.667}
+  m_LocalPosition: {x: -0.377, y: -0.2, z: -0.667}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1202490506}
@@ -1370,7 +1370,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724453643}
-  m_Text: Head
+  m_Text: Cubes
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1883,7 +1883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950772351}
   m_LocalRotation: {x: 0.7071068, y: 0.000000014901161, z: -0.000000059604645, w: 0.7071068}
-  m_LocalPosition: {x: -0.372, y: -0.2, z: -0.667}
+  m_LocalPosition: {x: -0.391, y: -0.2, z: -0.667}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1662250641}
@@ -2385,7 +2385,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1210338024}
   - component: {fileID: 1210338023}
-  - component: {fileID: 1210338025}
   m_Layer: 0
   m_Name: Virtual Eyes
   m_TagString: Untagged
@@ -2419,20 +2418,6 @@ Transform:
   m_Father: {fileID: 761765898}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1210338025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210338022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff59d9464b8d75499110a7dd2b2a072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 0}
-  tickDelay: 500
 --- !u!1 &1318461224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8aa49b2f635a5140afc95bdb4d902ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleTagName: ActorHead
+  toggleTagName: CubeSpawner
 --- !u!1 &1662250637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,7 +3116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753808976}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.214, y: -0.2, z: -0.667}
+  m_LocalPosition: {x: -0.228, y: -0.2, z: -0.667}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 574095589}

@@ -7,8 +7,9 @@ using UnityEngine;
 /// </summary>
 public class TagToggle : MonoBehaviour
 {
-
     public string toggleTagName;
+
+    private GameObject[] _disabledCache = new GameObject[0];
 
     private void OnEnable()
     {
@@ -22,10 +23,22 @@ public class TagToggle : MonoBehaviour
 
     private void SetTaggedActive(bool active)
     {
-        var objects = GameObject.FindGameObjectsWithTag(toggleTagName);
-        foreach (var obj in objects)
+        if (active)
         {
-            obj.GetComponent<CubeSpawner>().gameObject.SetActive(active);
+            foreach (var obj in _disabledCache)
+            {
+                obj.SetActive(true);
+            }
+            _disabledCache = new GameObject[0];
+        }
+        else
+        {
+            var objects = GameObject.FindGameObjectsWithTag(toggleTagName);
+            foreach (var obj in objects)
+            {
+                obj.SetActive(false);
+            }
+            _disabledCache = objects;
         }
     }
 }

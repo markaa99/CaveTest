@@ -5,9 +5,14 @@ using UnityEngine;
 public class CubeSpawner : MonoBehaviour
 {
     public GameObject cubePrefab;
-    public int tickDelay = 50;
+    public int tickDelay;
 
     private int delay = 0;
+
+    private void Start()
+    {
+        Debug.Log(name + ": I am alive and my prefab is " + cubePrefab);
+    }
 
     void FixedUpdate()
     {

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ObjectToggleButton : MonoBehaviour
 {
-
-
     public GameObject toggleObject;
     public Material onMaterial;
     public Material offMaterial;
+    public double toggleCooldown = 1.0;
+
+    private double _lastInteractionTimestamp;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,12 @@ public class ObjectToggleButton : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (Time.time - _lastInteractionTimestamp < toggleCooldown)
+        {
+            return;
+        }
+        _lastInteractionTimestamp = Time.time;
+        Debug.Log(Time.time);
         toggleObject.SetActive(!toggleObject.activeSelf);
         ApplyMaterial();
     }
