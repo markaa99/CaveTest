@@ -24,7 +24,6 @@ public class ObjectToggleButton : MonoBehaviour
             return;
         }
         _lastInteractionTimestamp = Time.time;
-        Debug.Log(Time.time);
         toggleObject.SetActive(!toggleObject.activeSelf);
         ApplyMaterial();
     }

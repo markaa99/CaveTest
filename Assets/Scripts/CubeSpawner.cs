@@ -9,11 +9,6 @@ public class CubeSpawner : MonoBehaviour
 
     private int delay = 0;
 
-    private void Start()
-    {
-        Debug.Log(name + ": I am alive and my prefab is " + cubePrefab);
-    }
-
     void FixedUpdate()
     {
         if (delay-- == 0)
