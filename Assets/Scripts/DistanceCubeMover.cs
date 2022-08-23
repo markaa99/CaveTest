@@ -1,0 +1,81 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
+public class DistanceCubeMover : MonoBehaviour
+{
+    public int ShowTime = 2;
+    public int DelayTime = 3;
+    public float MinDistance = 1;
+    public float MaxDistance = 8;
+
+    public GameObject cube;
+    public GameObject text;
+    public AudioSource audioSource;
+
+    private Vector3 _defaultCubePosition;
+    private double _lastUpdateTime = 0;
+
+    private double _lastValue = 0;
+    bool _delayPhase;
+
+    void Start()
+    {
+        _defaultCubePosition = cube.gameObject.transform.position;
+    }
+
+    public void FixedUpdate()
+    {
+        if (_delayPhase)
+        {
+            if (Time.time - _lastUpdateTime >= DelayTime)
+            {
+                _lastUpdateTime = Time.time;
+                _delayPhase = false;
+                UpdateCubePosition();
+            }
+            return;
+        }
+
+        if (Time.time - _lastUpdateTime >= ShowTime)
+        {
+            _lastUpdateTime = Time.time;
+            cube.SetActive(false);
+            _delayPhase = true;
+        }
+    }
+
+    private void OnDisable()
+    {
+        ResetCubePosition();
+    }
+
+    private void UpdateCubePosition()
+    {
+        ResetCubePosition();
+        double dist;
+        // don't use the same distance twice in a row
+        do
+        {
+            dist = Math.Floor(Random.Range(MinDistance, MaxDistance + 1));
+        } while (dist == _lastValue);
+
+        cube.transform.position = _defaultCubePosition + new Vector3(0, 0, (float)dist);
+        text.GetComponent<TextMesh>().text = dist.ToString();
+
+        float rdmScale = (float)(Random.Range(0.5f, 1.5f) * dist); // Scale with the distance + a small random to eleminate size based estimations
+        cube.transform.localScale = new Vector3(rdmScale, rdmScale, rdmScale);
+        audioSource.Play();
+        _lastValue = dist;
+    }
+
+    private void ResetCubePosition()
+    {
+        cube.SetActive(true);
+        cube.transform.localScale = Vector3.one;
+        cube.transform.position = _defaultCubePosition;
+    }
+}
