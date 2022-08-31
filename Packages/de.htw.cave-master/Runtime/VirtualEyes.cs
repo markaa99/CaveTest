@@ -47,7 +47,7 @@ namespace Htw.Cave
             {
                 var euler = transform.rotation.eulerAngles;
                 var angleYAbs = Math.Abs(euler.y);
-                seperationMultiplier *= (angleYAbs < 90 || angleYAbs > 270) ? -1 : 1;
+                seperationMultiplier *= (angleYAbs < 90 || angleYAbs > 270) ? 1 : -1;
             }
 
             switch (stereoTarget)

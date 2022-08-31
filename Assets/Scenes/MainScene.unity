@@ -2363,7 +2363,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2}
+  m_Size: {x: 1, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &937404023
 MeshRenderer:
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9747ed0ef33034449c211e5939dfe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceForwardZ: 1
+  forceForwardZ: 0
 --- !u!4 &1210338024
 Transform:
   m_ObjectHideFlags: 0
@@ -3324,7 +3324,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2}
+  m_Size: {x: 1, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1432630588
 MeshRenderer:
