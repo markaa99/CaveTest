@@ -15,6 +15,8 @@ public class DistanceCubeMover : MonoBehaviour
     public GameObject cube;
     public GameObject text;
     public AudioSource audioSource;
+    public List<Material> cubeMaterials;
+    public List<Renderer> cubeRenderers;
 
     private Vector3 _defaultCubePosition;
     private double _lastUpdateTime = 0;
@@ -67,6 +69,7 @@ public class DistanceCubeMover : MonoBehaviour
         text.GetComponent<TextMesh>().text = dist.ToString();
         float rdmScale = (float)(Random.Range(0.5f, 1.5f) * dist); // Scale with the distance + a small random to eleminate size based estimations
         cube.transform.localScale = new Vector3(rdmScale, rdmScale, rdmScale);
+        AssignRandomMaterial();
         audioSource.Play();
         _lastValue = dist;
     }
@@ -85,5 +88,12 @@ public class DistanceCubeMover : MonoBehaviour
         var exp = Random.Range(1, maxExp + 1); // Add one because Range max is exclusive
         var rdm = Math.Pow(2, exp) * MinDistance / 2; // Basic exponential function
         return rdm;
+    }
+
+    private void AssignRandomMaterial()
+    {
+        int index = Random.Range(0, cubeMaterials.Count);
+        foreach (var renderer in cubeRenderers)
+            renderer.material = cubeMaterials[index];
     }
 }
