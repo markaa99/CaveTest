@@ -60,12 +60,11 @@ public class DistanceCubeMover : MonoBehaviour
         // don't use the same distance twice in a row
         do
         {
-            dist = Math.Floor(Random.Range(MinDistance, MaxDistance + 1));
+            dist = GetRandomDistance();
         } while (dist == _lastValue);
 
         cube.transform.position = _defaultCubePosition + new Vector3(0, 0, (float)dist);
         text.GetComponent<TextMesh>().text = dist.ToString();
-
         float rdmScale = (float)(Random.Range(0.5f, 1.5f) * dist); // Scale with the distance + a small random to eleminate size based estimations
         cube.transform.localScale = new Vector3(rdmScale, rdmScale, rdmScale);
         audioSource.Play();
@@ -77,5 +76,14 @@ public class DistanceCubeMover : MonoBehaviour
         cube.SetActive(true);
         cube.transform.localScale = Vector3.one;
         cube.transform.position = _defaultCubePosition;
+    }
+
+    private double GetRandomDistance()
+    {
+        // Exponential distances from MinDistance to MaxDistance
+        var maxExp = (int)Math.Log(MaxDistance, 2) + 2; // Reverse of the function below to compute the max exp that is still inside given MaxDistance
+        var exp = Random.Range(1, maxExp + 1); // Add one because Range max is exclusive
+        var rdm = Math.Pow(2, exp) * MinDistance / 2; // Basic exponential function
+        return rdm;
     }
 }
