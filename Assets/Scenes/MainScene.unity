@@ -3011,7 +3011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9747ed0ef33034449c211e5939dfe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceForwardZ: 0
+  forceForwardZ: 1
 --- !u!4 &1210338024
 Transform:
   m_ObjectHideFlags: 0
