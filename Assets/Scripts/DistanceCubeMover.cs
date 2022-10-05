@@ -68,7 +68,7 @@ public class DistanceCubeMover : MonoBehaviour
         cube.transform.position = _defaultCubePosition + new Vector3(0, 0, (float)dist);
         text.GetComponent<TextMesh>().text = dist.ToString();
         float rdmScale = (float)(Random.Range(0.5f, 1.5f) * dist); // Scale with the distance + a small random to eleminate size based estimations
-        cube.transform.localScale = new Vector3(rdmScale, rdmScale, rdmScale);
+        // cube.transform.localScale = new Vector3(rdmScale, rdmScale, rdmScale);
         AssignRandomMaterial();
         audioSource.Play();
         _lastValue = dist;

@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdf92afc8eb9524eaab322f4704fe2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeSeperation: 0.065
+  eyeSeperation: 0.06
   nearClipPlane: 0.05
   farClipPlane: 1000
   lockCameras: 0
